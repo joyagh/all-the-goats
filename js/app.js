@@ -1,7 +1,7 @@
 'use strict' 
 
-let votes = document.getElementById("");
-let results = document.getElementById("");
+let votes = document.getElementById("votes");
+let results = document.getElementById("results");
 
 
 function Goats(name,imgSrc) {
@@ -11,12 +11,13 @@ function Goats(name,imgSrc) {
      this.viewCount = 0;
 }
 
-let cruisinGoat = new Goats("cruisinGoat", "./img/cruisin-goat.jpeg");
-let floatGoat = new Goats("floatGoat", "./img/float-your-goat.jpeg");
-let kissingGoat = new Goats("kissingGoat", ".img/kissing-goat.jpeg");
-let sassyGoat = new Goats("sassyGoat", "./img/sassy-goat.jpeg");
-let smilingGoat = new Goats("smilingGoat","./img/smiling-goat.jpeg");
-let sweaterGoat = new Goats("sweaterGoat", "./img/sweater-goat.jpeg");
+
+let cruisinGoat = new Goats("cruisinGoat", "./img/cruisin-goat.jpg");
+let floatGoat = new Goats("floatGoat", "./img/float-your-goat.jpg");
+let kissingGoat = new Goats("kissingGoat", ".img/kissing-goat.jpg");
+let sassyGoat = new Goats("sassyGoat", "./img/sassy-goat.jpg");
+let smilingGoat = new Goats("smilingGoat","./img/smiling-goat.jpg");
+let sweaterGoat = new Goats("sweaterGoat", "./img/sweater-goat.jpg");
 
 let goatsArray = [];
 
@@ -26,4 +27,14 @@ goatsArray.push(kissingGoat);
 goatsArray.push(sassyGoat);
 goatsArray.push(smilingGoat);
 goatsArray.push(sweaterGoat);
+console.log(goatsArray);
 
+let randomGoats = goatsArray[3];
+
+function randomGoats(goatsArray) {
+     return goatsArray[Math.floor(Math.random() * goatsArray.length)];
+   };
+
+function addImg(){
+     
+}
