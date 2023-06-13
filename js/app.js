@@ -3,11 +3,11 @@
 let votes = document.getElementById("votes");
 let results = document.getElementById("results");
 
-let goat1 = document.getElementById("goat1");
-let goat2 = document.getElementById("goat2");
-let goat3 = document.getElementById("goat3");
-let goat4 = document.getElementById("goat4");
-let goat5 = document.getElementById("goat5");
+let goat1Img = document.getElementById("goat1");
+let goat2Img = document.getElementById("goat2");
+let goat3Img = document.getElementById("goat3");
+let goat4Img = document.getElementById("goat4");
+let goat5Img = document.getElementById("goat5");
 
 function Goats(name, imgSrc) {
   this.name = name;
@@ -32,33 +32,32 @@ goatsArray.push(sassyGoat);
 goatsArray.push(smilingGoat);
 goatsArray.push(sweaterGoat);
 
-// turn goat images into funtion
-//
-// add alts to each img . name
-function setImages(goat1, goat2) {
-  goat1.src = goat1.imgSrc;
-  goat2.src = goat2.imgSrc;
-  goat3.src = goat3.imgSrc;
-  goat4.src = goat4.imgSrc;
-  goat5.src = goat5.imgSrc;
-};
-setImages(goatsArray[0], goatsArray[1]);
-// Step 1 Voting area, at top from dom
 
-// //Step 2 define event handler
-// function goatHandlerClick(event) {
-//   event.preventDefault();
-//   let target = event.target;
-// }
+function setGoatsImages(goat1, goat2) {
+  goat1Img.src = goat1.imgSrc;
+  goat2Img.src = goat2.imgSrc;
+  goat3Img.src = goat3.imgSrc;
+  goat4Img.src = goat4.imgSrc;
+  goat5Img.src = goat5.imgSrc;
+}
+ setGoatsImages(goatsArray[3], goatsArray[5]);
 
-// //Step 3 add event handler
-// votes.addEventListener("clicked", goatHandlerClick);
 
-function getRandomGoats(name, imgSrc) {
-  return goatsArray[Math.floor(Math.random() * goatsArray.length)];
+//Step 2 define event handler
+function handleGoatsClick(event) {
+  console.log("click");
+  event.preventDefault();
+  
 }
 
-let randomGoats = getRandomGoats(goatsArray);
-console.log(randomGoats);
+// //Step 3 add event handler
+votes.addEventListener("clicked", handleGoatsClick);
 
-console.log(`Your random goat is `);
+// function getRandomGoats(name, imgSrc) {
+//   return goatsArray[Math.floor(Math.random() * goatsArray.length)];
+// }
+
+// let randomGoats = getRandomGoats(goatsArray);
+// console.log(randomGoats);
+
+// console.log(`Your random goat is `);
