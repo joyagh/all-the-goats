@@ -33,14 +33,19 @@ goatsArray.push(smilingGoat);
 goatsArray.push(sweaterGoat);
 
 
-function setGoatsImages(goat1, goat2) {
+function setGoatsImages(goat1, goat2, goat3, goat4, goat5) {
   goat1Img.src = goat1.imgSrc;
+  goat1Img.alt = goat1.name;
   goat2Img.src = goat2.imgSrc;
+  goat2Img.alt = goat2.name;
   goat3Img.src = goat3.imgSrc;
+  goat3Img.alt = goat3.alt;
   goat4Img.src = goat4.imgSrc;
+  goat4Img.alt = goat4.name;
   goat5Img.src = goat5.imgSrc;
+  goat5Img.alt = goat5.name;
 }
- setGoatsImages(goatsArray[3], goatsArray[5]);
+ setGoatsImages(goatsArray[0],goatsArray[1],goatsArray[2],goatsArray[3],goatsArray[4], goatsArray[5]);
 
 
 //Step 2 define event handler
@@ -51,13 +56,13 @@ function handleGoatsClick(event) {
 }
 
 // //Step 3 add event handler
-votes.addEventListener("clicked", handleGoatsClick);
+votes.addEventListener("click", handleGoatsClick);
 
-// function getRandomGoats(name, imgSrc) {
-//   return goatsArray[Math.floor(Math.random() * goatsArray.length)];
-// }
+function getRandomGoats(name, imgSrc) {
+  return goatsArray[Math.floor(Math.random() * goatsArray.length)];
+}
 
-// let randomGoats = getRandomGoats(goatsArray);
-// console.log(randomGoats);
+let randomGoats = getRandomGoats(goatsArray);
+console.log(randomGoats);
 
-// console.log(`Your random goat is `);
+console.log(`Your random goat is `);
