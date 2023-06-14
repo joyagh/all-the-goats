@@ -62,16 +62,26 @@ function handleGoatsClick(event) {
   event.preventDefault();
   let target = event.target;
   let goatName = target.alt;
+  
+  for (let i = 0; i < goatsArray.length; i++) {
+    let goats = goatsArray[i];
+    if(goats.name === goatName) {
+      favGoat = goats;
+    }
+  }
  console.log(goatName);
 }
 
 // //Step 3 add event handler
 votes.addEventListener("click", handleGoatsClick);
 
+let favGoat;
+
+
 function getRandomGoats(name, imgSrc) {
   return goatsArray[Math.floor(Math.random() * goatsArray.length)];
 }
 
-let randomGoats = getRandomGoats(goatsArray);
 
-console.log(randomGoats);
+
+
