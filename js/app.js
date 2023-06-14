@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 let votes = document.getElementById("votes");
 let results = document.getElementById("results");
@@ -9,7 +9,6 @@ let goat3Img = document.getElementById("goat3");
 let goat4Img = document.getElementById("goat4");
 let goat5Img = document.getElementById("goat5");
 let goat6Img = document.getElementById("goat6");
-
 
 function Goats(name, imgSrc) {
   this.name = name;
@@ -34,14 +33,13 @@ goatsArray.push(sassyGoat);
 goatsArray.push(smilingGoat);
 goatsArray.push(sweaterGoat);
 
-
 function setGoatsImages(goat1, goat2, goat3, goat4, goat5, goat6) {
   goat1Img.src = goat1.imgSrc;
   goat1Img.alt = goat1.name;
   goat2Img.src = goat2.imgSrc;
   goat2Img.alt = goat2.name;
   goat3Img.src = goat3.imgSrc;
-  goat3Img.alt = goat3.alt;
+  goat3Img.alt = goat3.name;
   goat4Img.src = goat4.imgSrc;
   goat4Img.alt = goat4.name;
   goat5Img.src = goat5.imgSrc;
@@ -49,8 +47,14 @@ function setGoatsImages(goat1, goat2, goat3, goat4, goat5, goat6) {
   goat6Img.src = goat6.imgSrc;
   goat6Img.alt = goat6.name;
 }
- setGoatsImages(goatsArray[0],goatsArray[1],goatsArray[2],goatsArray[3],goatsArray[4], goatsArray[5]);
-
+setGoatsImages(
+  goatsArray[0],
+  goatsArray[1],
+  goatsArray[2],
+  goatsArray[3],
+  goatsArray[4],
+  goatsArray[5]
+);
 
 //Step 2 define event handler
 function handleGoatsClick(event) {
@@ -58,8 +62,7 @@ function handleGoatsClick(event) {
   event.preventDefault();
   let target = event.target;
   let goatName = target.alt;
-  console.log(goatName);
-  
+ console.log(goatName);
 }
 
 // //Step 3 add event handler
@@ -67,10 +70,8 @@ votes.addEventListener("click", handleGoatsClick);
 
 function getRandomGoats(name, imgSrc) {
   return goatsArray[Math.floor(Math.random() * goatsArray.length)];
-
 }
 
 let randomGoats = getRandomGoats(goatsArray);
 
 console.log(randomGoats);
-
