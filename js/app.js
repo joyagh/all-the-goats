@@ -87,4 +87,15 @@ function handleProdsClick(event) {
 }
 
 votes.addEventListener("click", handleProdsClick);
-// //Step 3 add event handler
+
+function render(event) {
+  for (let i = 0; i < prodsArray.length; i++) {
+    let prods = prodsArray[i];
+    let prodName = prods.name;
+    let prodVote = prods.voteCount;
+    let report = `The product ${prodName} received ${prodVote}`;
+    console.log(report);
+  }
+}
+
+render();
