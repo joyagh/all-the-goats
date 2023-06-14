@@ -52,6 +52,7 @@ function setGoatsImages(goat1, goat2, goat3, goat4, goat5) {
 function handleGoatsClick(event) {
   console.log("click");
   event.preventDefault();
+  let target = event.target;
   
 }
 
@@ -63,6 +64,6 @@ function getRandomGoats(name, imgSrc) {
 }
 
 let randomGoats = getRandomGoats(goatsArray);
-console.log(randomGoats);
 
-console.log(`Your random goat is `);
+
+
