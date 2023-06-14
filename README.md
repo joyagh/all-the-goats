@@ -1,6 +1,6 @@
 # Lab-11
 
-## all-the-goats
+## Odd-Duck
 
 ### Author: Justine Oyaghiro
 
