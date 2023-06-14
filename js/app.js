@@ -19,18 +19,22 @@ function Products(name, imgSrc) {
 
 let bag = new Products("bag", "./img/bag.jpg");
 let banana = new Products("banana", "./img/banana.jpg");
+// let bathroom
+// let boots
+let breakfast = new Products("breakfast", "./img/breakfast.jpg");
+// let bubblegum
+// let chair
 let dog = new Products("dog", "./img/dog-duck.jpg");
 let dragon = new Products("dragon", "./img/dragon.jpg");
-let breakfast = new Products("breakfast", "./img/breakfast.jpg");
 let wineGlass = new Products("wineGlass", "./img/wine-glass.jpg");
 
 let prodsArray = [];
 
 prodsArray.push(bag);
 prodsArray.push(banana);
+prodsArray.push(breakfast);
 prodsArray.push(dog);
 prodsArray.push(dragon);
-prodsArray.push(breakfast);
 prodsArray.push(wineGlass);
 
 // let prods2Array = []
@@ -56,35 +60,31 @@ setProdsImages(
   prodsArray[2],
   prodsArray[3],
   prodsArray[4],
-  prodsArray[5],
+  prodsArray[5]
 );
 
-//Step 2 define event handler
-// function handleprodsClick(event) {
-//   console.log("click");
-//   event.preventDefault();
-//   let target = event.target;
-//   let prodName = target.alt;
-  
-//   for (let i = 0; i < prodsArray.length; i++) {
-//     let prods = prodsArray[i];
-//     if(prods.name === prodName) {
-//       favprod = prods;
-//     }
-//   }
-//  console.log(prodName);
-// }
+function getRandomprods(name, imgSrc) {
+  return prodsArray[Math.floor(Math.random() * prodsArray.length)];
+}
+// Step 2 define event handler
+function handleProdsClick(event) {
+  console.log("click");
+  event.preventDefault();
+  let target = event.target;
+  let prodName = target.alt;
 
-// // //Step 3 add event handler
-// votes.addEventListener("click", handleprodsClick);
+  let favProd;
 
+  for (let i = 0; i < prodsArray.length; i++) {
+    let prods = prodsArray[i];
+    if (prods.name === prodName) {
+      favProd = prods;
+    }
+  }
+  favProd.voteCount++;
 
+  console.log(prodName, favProd.voteCount);
+}
 
-
-// function getRandomprods(name, imgSrc) {
-//   return prodsArray[Math.floor(Math.random() * prodsArray.length)];
-// }
-
-
-
-
+votes.addEventListener("click", handleProdsClick);
+// //Step 3 add event handler
