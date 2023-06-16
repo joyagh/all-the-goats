@@ -30,7 +30,7 @@ let prodsArray = [
   new Products("pet-sweep", "./img/pet-sweep.jpg"),
   new Products("scissors", "./img/scissors.jpg"),
   new Products("shark", "./img/shark.jpg"),
-  new Products("sweep", "./img/sweep.jpg"),
+  new Products("sweep", "./img/sweep.png"),
   new Products("tauntaun", "./img/tauntaun.jpg"),
   new Products("unicorn", "./img/unicorn.jpg"),
   new Products("water-can", "./img/water-can.jpg"),
@@ -113,7 +113,7 @@ function render(event) {
     let prods = prodsArray[i];
     let prodName = prods.name;
     let prodVote = prods.voteCount;
-    let report = `The product ${prodName} received ${prodVote}`;
+    let report = `The product ${prodName} received ${prodVote} votes.`;
     prodUl.appendChild(prodLi);
     prodLi.textContent = report;
     console.log(report);
