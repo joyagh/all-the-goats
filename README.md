@@ -9,4 +9,5 @@ https://www.w3schools.com/jsref/jsref_includes_array.asp
 
 ### Lighthouse Scores
 
-![Lightouse Score](./img/LighthouseScore1.png)
+![Lighthouse Score](./img/LighthouseScore1.png)
+![Lighthouse Score](./img/lighthousescore2.png)
