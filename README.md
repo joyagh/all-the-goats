@@ -8,3 +8,5 @@
 https://www.w3schools.com/jsref/jsref_includes_array.asp
 
 ### Lighthouse Scores
+
+![LightHouse Score](./img/LighthouseScore1.png)
