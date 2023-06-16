@@ -27,13 +27,13 @@ let prodsArray = [
   new Products("dog", "./img/dog-duck.jpg"),
   new Products("dragon", "./img/dragon.jpg"),
   new Products("pen", "./img/pen.jpg"),
-  new Products("pet-sweep", "./img/pet-sweep.jpg"),
+  new Products("petSweep", "./img/pet-sweep.jpg"),
   new Products("scissors", "./img/scissors.jpg"),
   new Products("shark", "./img/shark.jpg"),
   new Products("sweep", "./img/sweep.png"),
   new Products("tauntaun", "./img/tauntaun.jpg"),
   new Products("unicorn", "./img/unicorn.jpg"),
-  new Products("water-can", "./img/water-can.jpg"),
+  new Products("waterCan", "./img/water-can.jpg"),
   new Products("wineGlass", "./img/wine-glass.jpg"),
 ];
 let currentArray = [];
@@ -56,7 +56,8 @@ function setProdImages() {
     imgArray[i].alt = currentArray[i].name;
     if (rounds != 0) {
       imgArray[i].addEventListener("click", handleProdsClick);
-    } else{ imgArray[i].removeEventListener("click", handleProdsClick);
+    } else {
+      imgArray[i].removeEventListener("click", handleProdsClick);
     }
   }
   // imgArray[i].removeEventListener();
@@ -106,10 +107,10 @@ function handleProdsClick(event) {
 // votes.addEventListener("click", handleProdsClick);
 
 function render(event) {
-  results.innerHTML = ""
-  let prodUl = document.createElement('ul');
+  results.innerHTML = "";
+  let prodUl = document.createElement("ul");
   for (let i = 0; i < prodsArray.length; i++) {
-    let prodLi = document.createElement('li');
+    let prodLi = document.createElement("li");
     let prods = prodsArray[i];
     let prodName = prods.name;
     let prodVote = prods.voteCount;
@@ -120,5 +121,56 @@ function render(event) {
   }
   results.appendChild(prodUl);
 }
-let button = document.getElementById('button');
-button.addEventListener("click", render)
+let button = document.getElementById("button");
+button.addEventListener("click", render);
+
+
+
+// let productChart = document.getElementById("chart");
+
+
+// function renderChart(){
+//   let prodNames = [];
+//   let likes = [];
+//   let views = [];
+
+// }
+
+// let chartObj = {
+//   type: "bar",
+//   data: {
+//     labels: [],
+//     datasets: [
+//       {
+//         label: "# of Votes",
+//         data: [],
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+// };
+
+// chartObj.data.labels = [
+//   "bag",
+//   "banana",
+//   "bathroom",
+//   "boots",
+//   "breakfast",
+//   "bubblegum",
+//   "chair",
+//   "cthulhu",
+//   "dogDuck",
+//   "dragon",
+//   "pen",
+//   "petSweep",
+//   "scissors",
+//   "shark",
+//   "sweep",
+//   "tauntaun",
+//   "unicorn",
+//   "waterCan",
+//   "wineGlass",
+// ];
+// chartObj.data.datasets[0].data = [
+//   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+// ];
